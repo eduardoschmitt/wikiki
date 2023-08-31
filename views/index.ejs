@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Wikiki</title>
+</head>
+<body>
+    <!-- Menu -->
+    <header class="menu">
+        <div class="logo">
+            <h1>Wiki<span>ki</span></h1>
+        </div>
+        <a class="button" href="#">Login</a>
+    </header>
+
+    <!-- Nav -->
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/destaque">Destaque</a></li>
+            <li><a href="#">Mais Curtidos</a></li>
+            <li>🔎</li>
+        </ul>
+    </nav>    
+
+    <main>
+        <% articles.forEach(article => { %>
+            <section id="<%= article.kb_id %>" class="styled-artigo">
+                <img class="poster" src="<%= article.kb_image %>" alt="<%= article.kb_title %>">
+                <div class="styled-div">
+                    <h3><%= article.kb_title %></h3>
+                    <p><%= article.kb_body %></p>
+                    <a class="read-more" href="#">Leia mais</a>
+                    <div class="like">
+                        <img class="like-image" src="/images/like.png" alt="">
+                        <span class="liked-count"><%= article.kb_liked_count %></span>
+                    </div>
+                </div>
+            </section>
+        <% }); %>
+    </main>
+</body>
+</html>

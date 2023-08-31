@@ -1,0 +1,58 @@
+    [
+        {
+        "kb_id": "7a6cc1282c5f6ec0235acd2bfa780145aa2a67fd",
+        "kb_title": "Título 01",
+        "kb_body": "Este artigo é um teste para uma base de conhecimento.",
+        "kb_permalink": "titulo01",
+        "kb_keywords": "teste",
+        "kb_liked_count": 10,
+        "kb_published": true,
+        "kb_suggestion": true,
+        "kb_featured": true,
+        "kb_author_email": "andre.ruaro@unesc.net",
+        "kb_published_date": "2023-08-30",
+        "kb_image": "https://media.istockphoto.com/id/1073667988/pt/foto/cute-dog-pug-breed-lying-on-ground-looking-on-computer-screen-working-and-typing-with-computer.jpg?s=2048x2048&w=is&k=20&c=B1oIuqQZmbCdhHLb6cYYRrFz_VSY_k5-k0Efo42uR_E="
+        },
+    {
+      "kb_id": "outro_id",
+      "kb_title": "Outro Título",
+      "kb_body": "Este é outro artigo de exemplo. aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "kb_permalink": "outro-titulo",
+      "kb_keywords": "outro",
+      "kb_liked_count": 5,
+      "kb_published": true,
+      "kb_suggestion": true,
+      "kb_featured": false,
+      "kb_author_email": "outra.pessoa@example.com",
+      "kb_published_date": "2023-08-31",
+      "kb_image": "https://media.istockphoto.com/id/1073667988/pt/foto/cute-dog-pug-breed-lying-on-ground-looking-on-computer-screen-working-and-typing-with-computer.jpg?s=2048x2048&w=is&k=20&c=B1oIuqQZmbCdhHLb6cYYRrFz_VSY_k5-k0Efo42uR_E="
+    },
+    {
+        "kb_id": "7a6cc1282c5f6ec0235acd2bfa780145aa2a67fd",
+        "kb_title": "Explorando os Mistérios do Planeta Aquaterra",
+        "kb_body": "No recôndito do universo, encontra-se um planeta misterioso chamado Aquaterra. Este artigo mergulha nas profundezas dos segredos que esse mundo enigmático abriga.",
+        "kb_permalink": "explorando-misterios-aquaterra",
+        "kb_keywords": "exploração, planetas, Aquaterra, mistérios cósmicos",
+        "kb_liked_count": 42,
+        "kb_published": true,
+        "kb_suggestion": true,
+        "kb_featured": true,
+        "kb_author_email": "explorador@universoexplorado.com",
+        "kb_published_date": "2023-08-30",
+        "kb_image": "https://s4.static.brasilescola.uol.com.br/be/2022/08/1-planeta-netuno.jpg"
+    },
+    {
+        "kb_id": "outro_id",
+        "kb_title": "Desvendando os Enigmas das Ruínas Ancestrais",
+        "kb_body": "Nas profundezas da selva inexplorada, as ruínas ancestrais revelam os segredos de civilizações perdidas. Este artigo lança luz sobre as descobertas arqueológicas mais recentes.",
+        "kb_permalink": "desvendando-enigmas-ruinas-ancestrais",
+        "kb_keywords": "arqueologia, civilizações antigas, ruínas, descobertas",
+        "kb_liked_count": 28,
+        "kb_published": true,
+        "kb_suggestion": true,
+        "kb_featured": false,
+        "kb_author_email": "historiador@passadorevelado.com",
+        "kb_published_date": "2023-08-31",
+        "kb_image": "https://s2.glbimg.com/N_hIzXQjj5mNz1KrJCUCsPNRHcs=/512x320/smart/e.glbimg.com/og/ed/f/original/2017/10/18/b1m7mn-pz_930x525.jpg"
+    }
+]

@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #eaeef6;
+}
+
+.logo {
+    display: grid;
+    place-items: center;
+    padding: 2vw;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu h1 {
+    color: #0396FF;
+    font-size: 3vh;
+    line-height: 20px;
+    font-weight: 800;
+}
+
+.menu h1 span {
+    color: rgb(37, 37, 37);
+    line-height: 20px
+}
+
+.button {
+    text-decoration: none;
+    margin: 20px;
+    padding: 2px 20px;
+    border: 2px solid #0396FF;
+    color: #0396FF;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover {
+    color: white;
+    background-color: #0396FF;
+}
+
+/* Nav */
+nav {
+    margin: 25px;
+    border-radius: 100px;
+    background-color: #0396FF;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1vw;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Artigo */
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.styled-artigo {
+    /* background-color: #e0e5f1; */ /* talvez trocar a cor futuramente... */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.styled-div {
+    display: grid;
+    place-items: start;
+    margin: auto;
+    padding: 10px;
+}
+
+.poster {
+    height: 200px;
+    border-radius: 20px;
+    max-width: auto;
+}
+
+.styled-artigo div h3 {
+    padding-bottom: 0.8vw;
+    font-weight: 800;
+    font-size: 30px;
+    color: #080808;
+}
+
+.styled-artigo div p {
+    padding-bottom: 0.8vw;
+    font-weight: 300;
+    font-size: 15px;
+    color: #555555;
+}
+
+/* Features */
+.like {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.like:hover {
+    filter: brightness(0.7);
+}
+
+.like-image {
+    width: 25px;
+    height: 25px;
+}
+
+.liked-count {
+    margin-left: 1.5px;
+    font-size: 25px;    
+    color: #cfd4e1;
+}
+
+.read-more {
+    color: #0396FF;
+    text-decoration: none;
+}
