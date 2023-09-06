@@ -14,6 +14,9 @@ app.use(express.static(__dirname + '/public'));
 const indexRoutes = require('./routes/index'); // Lembre-se de ajustar o caminho conforme a sua estrutura de pastas
 app.use('/', indexRoutes);
 
+const usersRoutes = require('./routes/users'); // Lembre-se de ajustar o caminho conforme a sua estrutura de pastas
+app.use('/login', usersRoutes);
+
 // Configurar suas rotas e middlewares aqui
 
 const PORT = process.env.PORT || 3000;
