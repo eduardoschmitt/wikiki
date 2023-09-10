@@ -10,11 +10,11 @@
 </head>
 
 <body>
-    <div class="container-inputs">
-        <input type="text" name="email" id="email" placeholder="Email">
-        <input type="password" name="password" id="password" placeholder="Senha">
-        <button type="submit" id="button-login">Entrar</button>
-    </div>
-    <script src="/script/login.js"></script>
+    <form class="container-inputs" action="/login/login" method="POST">
+        <input type="text" id="author_user" name="author_user" required><br><br>
+        <input type="password" id="author_pwd" name="author_pwd" required><br><br>
+        <input class="input-button" type="submit" value="Login">
+    </form>
+    <script src="/scripts/login.js"></script>
 </body>
 </html>

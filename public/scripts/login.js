@@ -1,13 +1,13 @@
-const e = require("express");
+console.log("login.js loaded");
 
-const buttonLogin = querySelector('#button-login');
+const buttonLogin = document.querySelector('#button-login');
 
 buttonLogin.addEventListener('click', (event) => {
     event.preventDefault();
 
-    const inputEmail = querySelector('#email');
-    const inputPassword = querySelector('#password');
-    fetch('http://localhost:3000/login', {
+    const inputEmail = document.querySelector('#email');
+    const inputPassword = document.querySelector('#password');
+    fetch('http://localhost:3000/users/logint', {
         method: 'POST',
         body: JSON.stringify({
             email: inputEmail.value,
@@ -21,5 +21,4 @@ buttonLogin.addEventListener('click', (event) => {
     }).catch(error=>{
         console.log(error);
     });
-
 });
