@@ -48,8 +48,7 @@ body {
 
 /* Nav */
 nav {
-    margin: 25px;
-    border-radius: 100px;
+    margin: 15px;
     background-color: #0396FF;
 }
 
@@ -57,12 +56,62 @@ nav ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 1vw;
+    padding: 0.5vw;
 }
 
 nav ul a {
     text-decoration: none;
     color: white;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.3s;
+}
+
+nav ul a:hover {
+    color: rgb(165, 198, 214);
+}
+
+
+/* Buscar */
+.buscar {
+    display: flex;
+    align-items: center;
+    border: solid 2px #0396FF;
+    border-radius:10px;
+    width:300px;
+    height:32px;
+}
+
+.lupa {
+    width: 16px;
+}
+
+.input-buscar {
+    float:left;
+    background-color:white;
+    padding-left:5px;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:191px;
+    outline: none;
+}
+
+.botao-buscar {
+    border:none;
+    float:left;
+    height:32px;
+    border-radius:0 7px 7px 0;
+    width:70px;
+    font-weight:bold;
+    background:#037dd4;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.botao-buscar:hover {
+    background-color: #004a7e;
+    transition: 0.5s;
 }
 
 /* Artigo */

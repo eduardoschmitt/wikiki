@@ -25,9 +25,14 @@
             <li><a href="/">Home</a></li>
             <li><a href="/destaque">Destaque</a></li>
             <li><a href="#">Mais Curtidos</a></li>
-            <li>🔎</li>
+            <li class="buscar">
+                <input class="input-buscar" type="text" id="txtBusca" placeholder="&#x1F50D; Buscar..."/>
+                <button class="botao-buscar" id="btnBusca">Buscar</button>
+            </li>
         </ul>
-    </nav>    
+    </nav>
+    
+    <!-- -->
 
     <main class="container-articles-list">
         <% articles.forEach(article => { %>
