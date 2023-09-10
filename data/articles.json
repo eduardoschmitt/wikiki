@@ -1,35 +1,8 @@
-    [
-        {
-        "kb_id": "7a6cc1",
-        "kb_title": "Título 01",
-        "kb_body": "Este artigo é um teste para uma base de conhecimento.",
-        "kb_permalink": "titulo01",
-        "kb_keywords": "teste",
-        "kb_liked_count": 10,
-        "kb_published": true,
-        "kb_suggestion": true,
-        "kb_featured": true,
-        "kb_author_email": "andre.ruaro@unesc.net",
-        "kb_published_date": "2023-08-30",
-        "kb_image": "https://media.istockphoto.com/id/1073667988/pt/foto/cute-dog-pug-breed-lying-on-ground-looking-on-computer-screen-working-and-typing-with-computer.jpg?s=2048x2048&w=is&k=20&c=B1oIuqQZmbCdhHLb6cYYRrFz_VSY_k5-k0Efo42uR_E="
-        },
-    {
-      "kb_id": "7a6cc2",
-      "kb_title": "Outro Título",
-      "kb_body": "Este é outro artigo de exemplo. aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "kb_permalink": "outro-titulo",
-      "kb_keywords": "outro",
-      "kb_liked_count": 5,
-      "kb_published": true,
-      "kb_suggestion": true,
-      "kb_featured": false,
-      "kb_author_email": "outra.pessoa@example.com",
-      "kb_published_date": "2023-08-31",
-      "kb_image": "https://media.istockphoto.com/id/1073667988/pt/foto/cute-dog-pug-breed-lying-on-ground-looking-on-computer-screen-working-and-typing-with-computer.jpg?s=2048x2048&w=is&k=20&c=B1oIuqQZmbCdhHLb6cYYRrFz_VSY_k5-k0Efo42uR_E="
-    },
+[
     {
         "kb_id": "7a6cc3",
         "kb_title": "Explorando os Mistérios do Planeta Aquaterra",
+        "kb_description": "No recôndito do universo, encontra-se um planeta misterioso chamado Aquaterra. Este artigo mergulha nas profundezas dos segredos que esse mundo enigmático abriga.",
         "kb_body": "No recôndito do universo, encontra-se um planeta misterioso chamado Aquaterra. Este artigo mergulha nas profundezas dos segredos que esse mundo enigmático abriga.",
         "kb_permalink": "explorando-misterios-aquaterra",
         "kb_keywords": "exploração;planetas;Aquaterra;mistérios;cósmicos",
@@ -44,6 +17,7 @@
     {
         "kb_id": "7a6cc4",
         "kb_title": "Desvendando os Enigmas das Ruínas Ancestrais",
+        "kb_description": "Nas profundezas da selva inexplorada, as ruínas ancestrais revelam os segredos de civilizações perdidas. Este artigo lança luz sobre as descobertas arqueológicas mais recentes.",
         "kb_body": "Nas profundezas da selva inexplorada, as ruínas ancestrais revelam os segredos de civilizações perdidas. Este artigo lança luz sobre as descobertas arqueológicas mais recentes.",
         "kb_permalink": "desvendando-enigmas-ruinas-ancestrais",
         "kb_keywords": "arqueologia;civilizações;antigas;ruínas;descobertas",
@@ -54,5 +28,21 @@
         "kb_author_email": "historiador@passadorevelado.com",
         "kb_published_date": "2023-08-31",
         "kb_image": "https://s2.glbimg.com/N_hIzXQjj5mNz1KrJCUCsPNRHcs=/512x320/smart/e.glbimg.com/og/ed/f/original/2017/10/18/b1m7mn-pz_930x525.jpg"
+    },
+    {
+        "kb_id": "7a6cc4",
+        "kb_title": "Tudo o que Você Precisa Saber sobre Pugs",
+        "kb_description": "Os pugs são uma raça de cachorro adorável e peculiar. Este artigo explora a história, características e cuidados essenciais para esses cãezinhos encantadores.",
+        "kb_body": "Os pugs são uma raça de cachorro pequena, de rosto enrugado e expressão adorável. Originários da China, esses cãezinhos têm uma história fascinante que remonta a séculos. Eles são conhecidos por sua personalidade carinhosa e leal, tornando-os excelentes companheiros para famílias e indivíduos de todas as idades. \n\nCaracterísticas dos Pugs:\n\n1. **Aparência Fofa**: Os pugs têm uma aparência única com seus olhos redondos e expressivos, orelhas caídas e focinho enrugado. Eles são frequentemente descritos como 'cachorros de rosto achatado'.\n2. **Personalidade Afetuosa**: São cães carinhosos, extrovertidos e amigáveis, adoram estar perto de seus donos e são ótimos com crianças.\n3. **Baixa Manutenção**: Pugs têm pelos curtos e não precisam de muitos cuidados com a pelagem. No entanto, eles são sensíveis ao calor e devem ser protegidos em dias quentes.\n4. **Necessidade de Exercício Moderado**: Embora sejam enérgicos, pugs não precisam de exercícios extremos. Passeios regulares e brincadeiras são suficientes.\n\nCuidados Essenciais:\n\n1. **Alimentação Balanceada**: Proporcione uma dieta equilibrada para manter um peso saudável, pois pugs têm tendência a ganhar peso.\n2. **Atenção Veterinária**: Consultas regulares ao veterinário são importantes para a saúde do pug, especialmente devido às suas características físicas peculiares.\n3. **Higiene Básica**: Limpe as rugas faciais do pug regularmente para evitar infecções de pele.\n\nOs pugs são verdadeiramente cães adoráveis e cativantes que podem trazer muita alegria aos seus lares. Se você está considerando adotar um pug, lembre-se de que eles precisam de amor, cuidado e atenção para serem felizes e saudáveis.",
+        "kb_permalink": "tudo-sobre-pugs",
+        "kb_keywords": "pugs;cachorros;raça;animais de estimação;cuidados com animais",
+        "kb_liked_count": 42,
+        "kb_published": true,
+        "kb_suggestion": true,
+        "kb_featured": false,
+        "kb_author_email": "amantedecachorros@email.com",
+        "kb_published_date": "2023-09-10",
+        "kb_image": "https://media.istockphoto.com/id/1073667988/pt/foto/cute-dog-pug-breed-lying-on-ground-looking-on-computer-screen-working-and-typing-with-computer.jpg?s=2048x2048&w=is&k=20&c=B1oIuqQZmbCdhHLb6cYYRrFz_VSY_k5-k0Efo42uR_E="
     }
+    
 ]
