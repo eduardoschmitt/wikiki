@@ -22,6 +22,16 @@ router.get('/artigo/:id', (req, res) => {
     }
 });
 
+router.get('/buscar', (req, res) => {
+    const keywords = req.query.keywords;
+    const keywordArray = keywords.split(' ').map(keyword => keyword.trim());
 
+    const filteredArticles = articlesData.filter(article => {
+        const articleKeywords = article.kb_keywords.split(';').map(keyword => keyword.trim());
+        return keywordArray.some(keyword => articleKeywords.includes(keyword));
+    });
+
+    res.render('index', { articles: filteredArticles, keywords });
+});
 
 module.exports = router;

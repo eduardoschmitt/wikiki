@@ -26,14 +26,15 @@
             <li><a href="/destaque">Destaque</a></li>
             <li><a href="#">Mais Curtidos</a></li>
             <li class="buscar">
-                <input class="input-buscar" type="text" id="txtBusca" placeholder="&#x1F50D; Buscar..."/>
-                <button class="botao-buscar" id="btnBusca">Buscar</button>
+                <form action="/buscar" method="GET">
+                    <input class="input-buscar" type="text" name="keywords" id="input-buscar" placeholder="&#x1F50D; Buscar..."/>
+                    <button class="botao-buscar" id="btn-busca" type="submit">Buscar</button>
+                </form>
             </li>
         </ul>
     </nav>
     
-    <!-- -->
-
+    <!-- Conteúdo -->
     <main class="container-articles-list">
         <% articles.forEach(article => { %>
             <section id="<%= article.kb_id %>" class="styled-artigo">
