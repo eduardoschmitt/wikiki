@@ -11,5 +11,17 @@ router.get('/destaque', (req, res) => {
     res.render('index', { articles: articlesSorted });
 });
 
+router.get('/artigo/:id', (req, res) => {
+    const articleId = req.params.id;
+    const article = articlesData.find(article => article.kb_id === articleId);
+
+    if (!article) {
+        res.render('error', { message: 'Artigo não encontrado' });
+    } else {
+        res.render('article_open', { article });
+    }
+});
+
+
 
 module.exports = router;
