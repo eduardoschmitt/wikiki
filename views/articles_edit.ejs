@@ -37,20 +37,20 @@
     <main>
         <div class="artigo-container">
             <h1>Editar Artigo</h1>
-            <form action="/articles/salvar" method="POST">
+            <form action="/articles/salvar/<%= article.kb_id %>" method="POST">
                 <input type="hidden" name="article_id" value="<%= article.kb_id %>">
                 <label for="title">Título:</label>
                 <input type="text" id="title" name="title" value="<%= article.kb_title %>"><br><br>
-    
+        
                 <label for="image">URL da Imagem:</label>
                 <input type="text" id="image" name="image" value="<%= article.kb_image %>"><br><br>
-    
+        
                 <label for="body">Corpo do Artigo:</label>
                 <textarea id="body" name="body"><%= article.kb_body %></textarea><br><br>
-    
+        
                 <input type="submit" value="Salvar">
             </form>
-        </div>
+        </div>        
     </main>
     
     
