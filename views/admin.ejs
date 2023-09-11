@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <title>Wikiki</title>
+</head>
+<body>
+    <!-- Menu -->
+    <header class="menu">
+        <div class="logo">
+            <h1>Wiki<span>ki</span></h1>
+        </div>
+        <a class="button" href="/login">Login</a>
+    </header>
+
+    <!-- Nav -->
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/destaque">Destaque</a></li>
+            <li><a href="#">Mais Curtidos</a></li>
+            <li class="buscar">
+                <form action="/buscar" method="GET">
+                    <input class="input-buscar" type="text" name="keywords" id="input-buscar" placeholder="&#x1F50D; Buscar..."/>
+                    <button class="botao-buscar" id="btn-busca" type="submit">Buscar</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+    
+    <!-- Conteúdo -->
+    <h1 class="admin-title">Admin</h1>
+    <div class="container-options">
+        <div class="option">
+            <p>Criar Artigo</p>
+        </div>
+        <div class="option">
+            <p>Criar User</p>
+        </div>
+    </div>
+    <h1 class="admin-title">Editar Artigos</h1>
+    <section class="container-articles-list">
+        <% articles.forEach(article => { %>
+            <section id="<%= article.kb_id %>" class="styled-artigo">
+                <img class="poster" src="<%= article.kb_image %>" alt="<%= article.kb_title %>">
+                <div class="styled-div">
+                    <h3><%= article.kb_title %></h3>
+                    <p><%= article.kb_description %></p>
+                    <a class="read-more" href="/articles/edit/<%= article.kb_id %>">Editar</a>
+                </div>
+            </section>
+        <% }); %>
+    </section>
+</body>
+</html>

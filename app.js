@@ -10,14 +10,14 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
 
-// Importe e utilize as rotas
-const indexRoutes = require('./routes/index'); // Lembre-se de ajustar o caminho conforme a sua estrutura de pastas
+const indexRoutes = require('./routes/index');
 app.use('/', indexRoutes);
 
-const usersRoutes = require('./routes/users'); // Lembre-se de ajustar o caminho conforme a sua estrutura de pastas
+const usersRoutes = require('./routes/users');
 app.use('/login', usersRoutes);
 
-// Configurar suas rotas e middlewares aqui
+const articlesRoutes = require('./routes/articles');
+app.use('/articles', articlesRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

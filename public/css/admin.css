@@ -1,0 +1,32 @@
+.admin-title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #484848;
+    padding: 2vh 0 4vh 0;
+}
+
+.container-options {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 4vh;
+}
+
+.option {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 6vw;
+    height: 12vh;
+    border-radius: 2vh;
+    padding: 2vh;
+    margin: 0.2vh 4vh;
+    background-color: #0396FF;
+    color: white;
+    box-shadow: rgb(203, 203, 203) 2px 2px 5px, rgb(230, 230, 230) -2px -2px 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease-out 0s;
+}
+
+.option:hover {
+    background-color: #0072FF;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Wikiki</title>
+</head>
+<body>
+    <!-- Menu -->
+    <header class="menu">
+        <div class="logo">
+            <h1>Wiki<span>ki</span></h1>
+        </div>
+        <a class="button" href="/login">Login</a>
+    </header>
+
+    <!-- Nav -->
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/destaque">Destaque</a></li>
+            <li><a href="#">Mais Curtidos</a></li>
+            <li class="buscar">
+                <form action="/buscar" method="GET">
+                    <input class="input-buscar" type="text" name="keywords" id="input-buscar" placeholder="&#x1F50D; Buscar..."/>
+                    <button class="botao-buscar" id="btn-busca" type="submit">Buscar</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="artigo-container">
+            <h1>Editar Artigo</h1>
+            <form action="/articles/salvar" method="POST">
+                <input type="hidden" name="article_id" value="<%= article.kb_id %>">
+                <label for="title">Título:</label>
+                <input type="text" id="title" name="title" value="<%= article.kb_title %>"><br><br>
+    
+                <label for="image">URL da Imagem:</label>
+                <input type="text" id="image" name="image" value="<%= article.kb_image %>"><br><br>
+    
+                <label for="body">Corpo do Artigo:</label>
+                <textarea id="body" name="body"><%= article.kb_body %></textarea><br><br>
+    
+                <input type="submit" value="Salvar">
+            </form>
+        </div>
+    </main>
+    
+    
+</body>
+</html>

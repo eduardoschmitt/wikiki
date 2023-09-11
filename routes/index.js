@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const articlesData = require('../data/articles.json'); // Importa os dados dos artigos
+const articlesData = require('../data/articles.json');
 
 router.get('/', (req, res) => {
     res.render('index', { articles: articlesData });
@@ -33,5 +33,5 @@ router.get('/buscar', (req, res) => {
 
     res.render('index', { articles: filteredArticles, keywords });
 });
-
+  
 module.exports = router;

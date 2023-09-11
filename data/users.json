@@ -1,6 +1,6 @@
 [
     {
-        "author_id": "7a6cc1282c5f6ec0235acd2bfa780145aa2a67fd",
+        "author_id": "7a6cc1282c5f6ec0235acd2bfa780145aa2a67fj",
         "author_name": "Andre Faria Ruaro",
         "author_email": "andre.ruaro@unesc.net",
         "author_user": "andre.ruaro",
@@ -9,11 +9,20 @@
         "author_status": "on"
     },
     {
-        "author_id": "7a6cc1282c5f6ec0235acd2bfa780145aa2a67fd",
+        "author_id": "7a6cc1282c5f6ec0235acd2bfa780145aa2a67fp",
         "author_name": "Farias Rusaro",
         "author_email": "rusaro@unesc.net",
         "author_user": "rusaro",
         "author_pwd": "pedro",
+        "author_level": "admin",
+        "author_status": "on"
+    },
+    {
+        "author_id": "7a6cc1282c5f6ec0235acd2bfa780145aa2a67fe",
+        "author_name": "Suporte",
+        "author_email": "suporte@suporte.com",
+        "author_user": "suporte",
+        "author_pwd": "suporte",
         "author_level": "admin",
         "author_status": "on"
     }
