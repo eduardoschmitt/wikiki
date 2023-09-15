@@ -49,6 +49,7 @@ body {
 /* Nav */
 nav {
     margin: 15px;
+    border-radius: 10px;
     background-color: #0396FF;
 }
 
@@ -86,6 +87,7 @@ nav ul a:hover {
 }
 
 .input-buscar {
+    border-radius: 5px;
     float:left;
     background-color:white;
     padding-left:5px;
@@ -97,20 +99,21 @@ nav ul a:hover {
 }
 
 .botao-buscar {
+    color: #0396FF;
+    margin-left: 5px;
     border:none;
-    float:left;
     height:32px;
-    border-radius:0 7px 7px 0;
+    border-radius: 5px;
     width:70px;
     font-weight:bold;
-    background:#037dd4;
-    color: white;
+    background:#ffffff;
     transition: 0.5s;
     cursor: pointer;
 }
 
 .botao-buscar:hover {
-    background-color: #004a7e;
+    background-color: #0396FF;
+    color: white;
     transition: 0.5s;
 }
 
