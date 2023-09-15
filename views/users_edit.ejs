@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Wikiki</title>
+</head>
+<body>
+    <!-- Menu -->
+    <header class="menu">
+        <div class="logo">
+            <h1>Wiki<span>ki</span></h1>
+        </div>
+        <a class="button" href="/login">Login</a>
+    </header>
+
+    <!-- Nav -->
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/destaque">Destaque</a></li>
+            <li><a href="#">Mais Curtidos</a></li>
+            <li class="buscar">
+                <form action="/buscar" method="GET">
+                    <input class="input-buscar" type="text" name="keywords" id="input-buscar" placeholder="&#x1F50D; Buscar..."/>
+                    <button class="botao-buscar" id="btn-busca" type="submit">Buscar</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="artigo-container">
+            <h1>Editar Usuário</h1>
+            <form action="/login/salvar/<%= user.author_id %>" method="POST">
+                <input type="hidden" name="author_id" value="<%= user.author_id %>">
+                
+                <label for="author_name">Nome:</label>
+                <input type="text" id="author_name" name="author_name" value="<%= user.author_name %>"><br><br>
+    
+                <label for="author_email">Email:</label>
+                <input type="email" id="author_email" name="author_email" value="<%= user.author_email %>"><br><br>
+    
+                <label for="author_user">Usuário:</label>
+                <input type="text" id="author_user" name="author_user" value="<%= user.author_user %>"><br><br>
+    
+                <label for="author_pwd">Senha:</label>
+                <input type="password" id="author_pwd" name="author_pwd" value="<%= user.author_pwd %>"><br><br>
+    
+                <label for="author_level">Nível:</label>
+                <select id="author_level" name="author_level">
+                    <option value="admin" <% if (user.author_level === 'admin') { %>selected<% } %>>Admin</option>
+                    <option value="usuario" <% if (user.author_level === 'usuario') { %>selected<% } %>>Usuário</option>
+                </select><br><br>
+    
+                <label for="author_status">Status:</label>
+                <select id="author_status" name="author_status">
+                    <option value="on" <% if (user.author_status === 'on') { %>selected<% } %>>Ativo</option>
+                    <option value="off" <% if (user.author_status === 'off') { %>selected<% } %>>Inativo</option>
+                </select><br><br>
+    
+                <input type="submit" value="Salvar">
+            </form>
+        </div>
+    </main>    
+    
+</body>
+</html>

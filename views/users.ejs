@@ -17,7 +17,6 @@
         <div class="logo">
             <h1>Wiki<span>ki</span></h1>
         </div>
-        <!-- <a class="button" href="/login">Login</a> -->
     </header>
 
     <!-- Nav -->
@@ -35,29 +34,15 @@
         </ul>
     </nav>
     
-    <!-- Conteúdo -->
-    <h1 class="admin-title">Admin</h1>
-    <div class="container-options">
-        <a href="/articles/criar">
-            <div class="option">
-                <p>Criar Artigo</p>
-            </div>
-        </a>
-        <a href="/login/usuarios">
-            <div class="option">
-                <p>Usuários</p>
-            </div>
-        </a>
-    </div>
-    <h1 class="admin-title">Editar Artigos</h1>
+    <h1 class="admin-title">Editar Usuários</h1>
+    <a href="/login/criar">Criar Usuário</a>
     <section class="container-articles-list">
-        <% articles.forEach(article => { %>
-            <section id="<%= article.kb_id %>" class="styled-artigo">
-                <img class="poster" src="<%= article.kb_image %>" alt="<%= article.kb_title %>">
+        <% users.forEach(user => { %>
+            <section id="<%= user.author_id %>" class="styled-artigo">
                 <div class="styled-div">
-                    <h3><%= article.kb_title %></h3>
-                    <p><%= article.kb_description %></p>
-                    <a class="read-more" href="/articles/edit/<%= article.kb_id %>">Editar</a>
+                    <h3><%= user.author_id %></h3>
+                    <p><%= user.author_email %></p>
+                    <a class="read-more" href="/login/edit/<%= user.author_id %>">Editar</a>
                 </div>
             </section>
         <% }); %>

@@ -39,20 +39,47 @@
             <h1>Editar Artigo</h1>
             <form action="/articles/salvar/<%= article.kb_id %>" method="POST">
                 <input type="hidden" name="article_id" value="<%= article.kb_id %>">
-                <label for="title">Título:</label>
-                <input type="text" id="title" name="title" value="<%= article.kb_title %>"><br><br>
-        
-                <label for="image">URL da Imagem:</label>
-                <input type="text" id="image" name="image" value="<%= article.kb_image %>"><br><br>
-        
-                <label for="body">Corpo do Artigo:</label>
-                <textarea id="body" name="body"><%= article.kb_body %></textarea><br><br>
-        
+                
+                <label for="kb_title">Título:</label>
+                <input type="text" id="kb_title" name="kb_title" value="<%= article.kb_title %>"><br><br>
+    
+                <label for="kb_description">Descrição:</label>
+                <input type="text" id="kb_description" name="kb_description" value="<%= article.kb_description %>"><br><br>
+    
+                <label for="kb_body">Corpo do Artigo:</label>
+                <textarea id="kb_body" name="kb_body"><%= article.kb_body %></textarea><br><br>
+    
+                <label for="kb_permalink">Permalink:</label>
+                <input type="text" id="kb_permalink" name="kb_permalink" value="<%= article.kb_permalink %>"><br><br>
+    
+                <label for="kb_keywords">Palavras-chave:</label>
+                <input type="text" id="kb_keywords" name="kb_keywords" value="<%= article.kb_keywords %>"><br><br>
+    
+                <label for="kb_liked_count">Contagem de Curtidas:</label>
+                <input type="number" id="kb_liked_count" name="kb_liked_count" value="<%= article.kb_liked_count %>"><br><br>
+    
+                <label for="kb_published">Publicado:</label>
+                <input type="checkbox" id="kb_published" name="kb_published" value="<%= article.kb_published %>"><br><br>
+    
+                <label for="kb_suggestion">Sugestão:</label>
+                <input type="checkbox" id="kb_suggestion" name="kb_suggestion" value="<%= article.kb_suggestion %>"><br><br>
+    
+                <label for="kb_featured">Destaque:</label>
+                <input type="checkbox" id="kb_featured" name="kb_featured" value="<%= article.kb_featured %>"><br><br>
+    
+                <label for="kb_author_email">Email do Autor:</label>
+                <input type="email" id="kb_author_email" name="kb_author_email" value="<%= article.kb_author_email %>"><br><br>
+    
+                <label for="kb_published_date">Data de Publicação:</label>
+                <input type="date" id="kb_published_date" name="kb_published_date" value="<%= article.kb_published_date %>"><br><br>
+    
+                <label for="kb_image">URL da Imagem:</label>
+                <input type="text" id="kb_image" name="kb_image" value="<%= article.kb_image %>"><br><br>
+    
                 <input type="submit" value="Salvar">
             </form>
         </div>        
-    </main>
-    
+    </main>    
     
 </body>
 </html>
