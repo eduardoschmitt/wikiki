@@ -16,6 +16,8 @@ function requireAuth(req, res, next) {
   }
 }
 
+router.use('/edit/', requireAuth);
+
 function updateUser(userId, newData) {
   const filePath = path.join(__dirname, '../data/users.json');
   const jsonData = fs.readFileSync(filePath, 'utf8');
