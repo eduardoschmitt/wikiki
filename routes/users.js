@@ -4,8 +4,17 @@ const fs = require("fs");
 const userData = require("../data/users.json");
 const path = require('path');
 const articlesData = require('../data/articles.json');
+const { checkCredentials } = require('../middleware/authenticator');
 
 router.use(express.json());
+
+function requireAuth(req, res, next) {
+  if (req.session && req.session.isAuthenticated) {
+      next();
+  } else {
+      res.status(401).json({ message: 'Você não está autenticado' });
+  }
+}
 
 function updateUser(userId, newData) {
   const filePath = path.join(__dirname, '../data/users.json');
@@ -68,27 +77,33 @@ function generateNewUserId() {
 }
 
 router.get("/", (req, res) => {
-  res.render("login");
+  res.render("login");  
 });
 
 router.get("/login", (req, res) => {
   res.sendFile(__dirname + "/login.html");
 });
 
-router.post("/admin", (req, res) => {
+router.post('/admin', (req, res) => {
   const { author_user, author_pwd } = req.body;
 
-  const user = userData.find(
-    (u) => u.author_user === author_user && u.author_pwd === author_pwd
-  );
-
-  if (user) {
-    return res.render('admin', { articles: articlesData });
+  if (checkCredentials(author_user, author_pwd)) {
+      req.session.isAuthenticated = true;
+      return res.render('admin', { articles: articlesData });
   } else {
-    //return res.status(401).json({ message: "Credenciais inválidas." });
-    return res.render('index', { articles: articlesData });
+      return res.render('index', { articles: articlesData });
   }
 });
+
+// Rota GET para a página de administração
+router.get('/admin', (req, res) => {
+  if (req.session.isAuthenticated) {
+      return res.render('admin', { articles: articlesData });
+  } else {
+      return res.redirect('/login'); 
+  }
+});
+
 
 router.get("/usuarios", (req, res) => {
   return res.render('users', { users: userData });

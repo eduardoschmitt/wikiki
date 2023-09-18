@@ -8,6 +8,16 @@ const bodyParser = require('body-parser');
 
 router.use(bodyParser.json());
 
+function requireAuth(req, res, next) {
+    if (req.session && req.session.isAuthenticated) {
+        next();
+    } else {
+        res.status(401).json({ message: 'Você não está autenticado' });
+    }
+}
+
+router.use('/edit/', requireAuth);
+
 function updateArticle(articleId, newData) {
     const filePath = path.join(__dirname, '../data/articles.json');
     const jsonData = fs.readFileSync(filePath, 'utf8');

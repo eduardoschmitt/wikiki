@@ -11,13 +11,11 @@
     <title>Wikiki</title>
 </head>
 <body>
-    <!-- Menu -->
-    <header class="menu">
-        <div class="logo">
-            <h1>Wiki<span>ki</span></h1>
-        </div>
-        <a class="button" href="/login">Login</a>
-    </header>
+    <% if (isAuthenticated) { %>
+        <%- include('../components/menu-auth.ejs') %>
+      <% } else { %>
+        <%- include('../components/menu.ejs') %>
+      <% } %>
 
     <%- include('../components/nav.ejs') %>
     

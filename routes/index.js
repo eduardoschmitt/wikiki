@@ -4,19 +4,19 @@ const articlesData = require('../data/articles.json');
 const likeMiddleware = require('../middleware/liked_counter.js');
 
 router.get('/', (req, res) => {
-    res.render('index', { articles: articlesData });
+    res.render('index', { articles: articlesData, isAuthenticated: req.session.isAuthenticated });
 });
 
 router.get('/destaque', (req, res) => {
     const articlesSorted = [...articlesData].sort((a, b) => b.kb_liked_count - a.kb_liked_count);
     const featuredArticles = articlesSorted.filter(article => article.kb_featured === true);
-    res.render('index', { articles: featuredArticles });
+    res.render('index', { articles: featuredArticles, isAuthenticated: req.session.isAuthenticated });
 });
 
 
 router.get('/curtidos', (req, res) => {
     const articlesSorted = [...articlesData].sort((a, b) => b.kb_liked_count - a.kb_liked_count);
-    res.render('index', { articles: articlesSorted });
+    res.render('index', { articles: articlesSorted, isAuthenticated: req.session.isAuthenticated });
 });
 
 router.get('/artigo/:id', (req, res) => {
@@ -39,7 +39,7 @@ router.get('/buscar', (req, res) => {
         return keywordArray.some(keyword => articleKeywords.includes(keyword));
     });
 
-    res.render('index', { articles: filteredArticles, keywords });
+    res.render('index', { articles: filteredArticles, keywords, isAuthenticated: req.session.isAuthenticated });
 });
 
 router.get('/curtir', likeMiddleware, (req, res) => {
