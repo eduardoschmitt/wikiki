@@ -65,9 +65,13 @@
                 </select><br><br>
     
                 <input type="submit" value="Salvar">
+
+            </form>
+            <form action="/login/deletar-usuario/<%= user.author_id %>" method="POST">
+                <input type="hidden" name="_method" value="DELETE"> <!-- Usando uma simulação de método DELETE via POST -->
+                <button type="submit">Confirmar Exclusão</button>
             </form>
         </div>
     </main>    
-    
 </body>
 </html>

@@ -13,10 +13,10 @@ router.get('/destaque', (req, res) => {
     res.render('index', { articles: featuredArticles, isAuthenticated: req.session.isAuthenticated });
 });
 
-
 router.get('/curtidos', (req, res) => {
     const articlesSorted = [...articlesData].sort((a, b) => b.kb_liked_count - a.kb_liked_count);
-    res.render('index', { articles: articlesSorted, isAuthenticated: req.session.isAuthenticated });
+    const top10Curtidos = articlesSorted.slice(0, 10);
+    res.render('index', { articles: top10Curtidos, isAuthenticated: req.session.isAuthenticated });
 });
 
 router.get('/artigo/:id', (req, res) => {

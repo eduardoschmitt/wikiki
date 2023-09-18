@@ -148,5 +148,20 @@
     "kb_author_email": "bailarino@email.com",
     "kb_published_date": "2023-09-24",
     "kb_image": "https://cdn.pixabay.com/photo/2017/11/11/21/55/freedom-2940655_1280.jpg"
+  },
+  {
+    "kb_id": "e5d6c7",
+    "kb_title": "O Mundo da Literatura Clássica",
+    "kb_description": "A literatura clássica é uma fonte inesgotável de sabedoria e beleza. Neste artigo, vamos mergulhar nas obras e autores que moldaram a literatura ao longo dos séculos.",
+    "kb_body": "A literatura clássica abrange obras literárias de grande importância que resistiram ao teste do tempo. Autores como Shakespeare, Homero, Jane Austen e muitos outros deixaram um legado duradouro na literatura mundial. Suas histórias e personagens continuam a inspirar leitores e escritores até hoje.",
+    "kb_permalink": "literatura-classica",
+    "kb_keywords": "literatura clássica;autores clássicos;obras literárias;legado literário;literatura mundial",
+    "kb_liked_count": 72,
+    "kb_published": true,
+    "kb_suggestion": true,
+    "kb_featured": false,
+    "kb_author_email": "amantedeleitura@email.com",
+    "kb_published_date": "2023-09-28",
+    "kb_image": "https://cdn.pixabay.com/photo/2014/09/05/18/32/old-books-436498_1280.jpg"
   }
 ]

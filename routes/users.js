@@ -78,6 +78,22 @@ function generateNewUserId() {
   return id;
 }
 
+function deleteUser(userId) {
+  const filePath = path.join(__dirname, '../data/users.json');
+  const jsonData = fs.readFileSync(filePath, 'utf8');
+  const usersData = JSON.parse(jsonData);
+
+  const index = usersData.findIndex((user) => user.author_id === userId);
+
+  if (index !== -1) {
+      const deletedUser = usersData.splice(index, 1)[0];
+      fs.writeFileSync(filePath, JSON.stringify(usersData, null, 2));
+      return deletedUser;
+  }
+
+  return null;
+}
+
 router.get("/", (req, res) => {
   res.render("login");  
 });
@@ -168,5 +184,17 @@ router.post('/criar', (req, res) => {
       return res.status(400).json({ message: 'Erro ao criar o usuário' });
   }
 });
+
+router.post('/deletar-usuario/:id', (req, res) => {
+  const userId = req.params.id;
+  const deletedUser = deleteUser(userId);
+
+  if (deletedUser) {
+      return res.status(200).json({ message: 'Usuário excluído com sucesso' });
+  } else {
+      return res.status(404).json({ message: 'Usuário não encontrado' });
+  }
+});
+
 
 module.exports = router;

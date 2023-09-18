@@ -92,6 +92,22 @@ function generateNewArticleId() {
     return id;
 }
 
+function deleteArticle(articleId) {
+    const filePath = path.join(__dirname, '../data/articles.json');
+    const jsonData = fs.readFileSync(filePath, 'utf8');
+    const articlesData = JSON.parse(jsonData);
+
+    const index = articlesData.findIndex((article) => article.kb_id === articleId);
+
+    if (index !== -1) {
+        const deletedArticle = articlesData.splice(index, 1)[0];
+        fs.writeFileSync(filePath, JSON.stringify(articlesData, null, 2));
+        return deletedArticle;
+    }
+
+    return null;
+}
+
 router.get("/edit", (req, res) => {
     res.render("articles_edit");
 });
@@ -170,6 +186,16 @@ router.get("/editar/user", (req, res) => {
     res.render("users_edit");
 });
 
+// Deleter
+router.post('/deletar-artigo/:id', (req, res) => {
+    const articleId = req.params.id;
+    const deletedArticle = deleteArticle(articleId);
 
-
+    if (deletedArticle) {
+        return res.status(200).json({ message: 'Artigo excluído com sucesso' });
+    } else {
+        return res.status(404).json({ message: 'Artigo não encontrado' });
+    }
+});
+    
 module.exports = router;
