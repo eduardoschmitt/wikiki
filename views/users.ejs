@@ -35,12 +35,19 @@
     </nav>
     
     <h1 class="admin-title">Editar Usuários</h1>
-    <a href="/login/criar">Criar Usuário</a>
+    <div class="container-options">
+        <a href="/login/criar">
+            <div class="option">
+                <p>Novo Usuário</p>
+            </div>
+        </a>
+    </div>
+    
     <section class="container-articles-list">
         <% users.forEach(user => { %>
             <section id="<%= user.author_id %>" class="styled-artigo">
                 <div class="styled-div">
-                    <h3><%= user.author_id %></h3>
+                    <h3><%= user.author_name %></h3>
                     <p><%= user.author_email %></p>
                     <a class="read-more" href="/login/edit/<%= user.author_id %>">Editar</a>
                 </div>

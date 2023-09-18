@@ -24,7 +24,7 @@
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/destaque">Destaque</a></li>
-            <li><a href="#">Mais Curtidos</a></li>
+            <li><a href="/curtidos">Mais Curtidos</a></li>
             <li class="buscar">
                 <form action="/buscar" method="GET">
                     <input class="input-buscar" type="text" name="keywords" id="input-buscar" placeholder="&#x1F50D; Buscar..."/>
@@ -39,8 +39,8 @@
             <h1><%= article.kb_title %></h1>          
             <img src="<%= article.kb_image %>" alt="<%= article.kb_title %>">
             <p><%= article.kb_body %></p>
+            <a href="/curtir?kb_id=<%= article.kb_id %>">Like</a>
         </div>           
     </main>
-    
 </body>
 </html>

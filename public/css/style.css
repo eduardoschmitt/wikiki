@@ -143,7 +143,7 @@ nav ul a:hover {
 .poster {
     height: 200px;
     border-radius: 20px;
-    max-width: auto;
+    max-width: 300px;
 }
 
 .styled-artigo div h3 {

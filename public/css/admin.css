@@ -11,6 +11,11 @@
     padding-bottom: 4vh;
 }
 
+.container-options a {
+    text-decoration: none;
+    text-align: center;
+}
+
 .option {
     display: flex;
     justify-content: center; 
