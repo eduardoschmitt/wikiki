@@ -25,9 +25,9 @@
             <img src="<%= article.kb_image %>" alt="<%= article.kb_title %>">
             <p class="texto-artigo"><%= article.kb_body %></p>
             <footer class="footer-article">
-                <p>Publicado em: <%= article.kb_published_date %></p>
-                <p>Por: <%= article.kb_author_email %></p>
-                <p>Curtidas: <%= article.kb_liked_count %></p>
+                <p><strong>Publicado em:</strong> <%= article.kb_published_date %></p>
+                <p><strong>Por:</strong> <%= article.kb_author_email %></p>
+                <p><strong>Curtidas:</strong> <%= article.kb_liked_count %></p>
                 <a href="/curtir?kb_id=<%= article.kb_id %>">Like</a>
             </footer>
         </div>           
