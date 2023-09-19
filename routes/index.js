@@ -26,7 +26,7 @@ router.get('/artigo/:id', (req, res) => {
     if (!article) {
         res.render('error', { message: 'Artigo não encontrado' });
     } else {
-        res.render('article_open', { article });
+        res.render('article_open', { article, isAuthenticated: req.session.isAuthenticated });
     }
 });
 

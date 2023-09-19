@@ -11,35 +11,20 @@
     <title>Wikiki</title>
 </head>
 <body>
-    <!-- Menu -->
-    <header class="menu">
-        <div class="logo">
-            <h1>Wiki<span>ki</span></h1>
-        </div>
-        <a class="button" href="/login">Login</a>
-    </header>
+    <% if (isAuthenticated) { %>
+        <%- include('../components/menu-auth.ejs') %>
+      <% } else { %>
+        <%- include('../components/menu.ejs') %>
+      <% } %>
 
-    <!-- Nav -->
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/destaque">Destaque</a></li>
-            <li><a href="/curtidos">Mais Curtidos</a></li>
-            <li class="buscar">
-                <form action="/buscar" method="GET">
-                    <input class="input-buscar" type="text" name="keywords" id="input-buscar" placeholder="&#x1F50D; Buscar..."/>
-                    <button class="botao-buscar" id="btn-busca" type="submit">Buscar</button>
-                </form>
-            </li>
-        </ul>
-    </nav>
+    <%- include('../components/nav.ejs') %>
 
     <main>
         <div class="artigo-container">
             <h1><%= article.kb_title %></h1>          
             <img src="<%= article.kb_image %>" alt="<%= article.kb_title %>">
-            <p><%= article.kb_body %></p>
-            <footer>
+            <p class="texto-artigo"><%= article.kb_body %></p>
+            <footer class="footer-article">
                 <p>Publicado em: <%= article.kb_published_date %></p>
                 <p>Por: <%= article.kb_author_email %></p>
                 <p>Curtidas: <%= article.kb_liked_count %></p>

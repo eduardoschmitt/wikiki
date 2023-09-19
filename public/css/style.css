@@ -208,3 +208,22 @@ nav ul a:hover {
     width: 80vh;
     height: auto;
 }
+
+/* Article open */
+
+.texto-artigo {
+    display: grid;
+    place-items: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.footer-article {
+    display: grid;
+    place-items: center;
+    align-items: center;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
