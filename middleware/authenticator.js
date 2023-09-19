@@ -7,11 +7,12 @@ function checkCredentials(username, password) {
     const usersData = JSON.parse(jsonData);
 
     const user = usersData.find(
-        (u) => u.author_user === username && u.author_pwd === password
+        (u) => u.author_user === username && u.author_pwd === password && u.author_status === true && u.author_level === 'admin'
     );
 
     return user !== undefined;
 }
+
 
 function loginUser(req, res) {
     const { author_user, author_pwd } = req.body;

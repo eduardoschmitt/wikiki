@@ -56,7 +56,7 @@ function createUser(newData) {
       author_user: newData.author_user,
       author_pwd: newData.author_pwd,
       author_level: newData.author_level,
-      author_status: newData.author_status,
+      author_status: JSON.parse(newData.author_status),
   };
 
   usersData.push(newUser);
@@ -109,7 +109,7 @@ router.post('/admin', (req, res) => {
       req.session.isAuthenticated = true;
       return res.render('admin', { articles: articlesData });
   } else {
-      return res.render('index', { articles: articlesData });
+      return res.render('index', { articles: articlesData, isAuthenticated: req.session.isAuthenticated });
   }
 });
 
